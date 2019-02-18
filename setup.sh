@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-apt install curl -y
+apt update && apt install curl -y
 
 curl https://get.acme.sh | sh
 
