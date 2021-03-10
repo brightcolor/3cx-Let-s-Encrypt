@@ -27,7 +27,7 @@ echo "Enter Cloudflare Mail: "
 read cfmail
 export CF_Email="$cfmail"
 
-#host=$(cat /etc/nginx/sites-enabled/3cxpbx | grep -m1 -Poe 'server_name \K[^; ]+')
+host=$(cat /etc/nginx/sites-enabled/3cxpbx | grep -m1 -Poe 'server_name \K[^; ]+')
 
 host=$(hostname).xvoip.cloud
 
