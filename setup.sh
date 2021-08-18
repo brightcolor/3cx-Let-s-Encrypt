@@ -7,15 +7,17 @@ source /root/.bashrc
 
 wget -O- http://downloads-global.3cx.com/downloads/3cxpbx/public.key | sudo apt-key add -
 
-echo "deb http://downloads-global.3cx.com/downloads/debian stretch main" | sudo tee /etc/apt/sources.list.d/3cxpbx.list
+echo "deb http://downloads-global.3cx.com/downloads/debian buster main" | sudo tee /etc/apt/sources.list.d/3cxpbx.list
 
-echo "deb http://downloads-global.3cx.com/downloads/debian stretch-testing main" | sudo tee /etc/apt/sources.list.d/3cxpbx-testing.list
+echo "deb http://downloads-global.3cx.com/downloads/debian buster-testing main" | sudo tee /etc/apt/sources.list.d/3cxpbx-testing.list
 
 aptitude update
 
 aptitude install net-tools dphys-swapfile
 
 aptitude update && aptitude install curl -y
+
+aptitude -y install 3cxpbx
 
 curl https://get.acme.sh | sh
 
